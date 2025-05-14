@@ -1,0 +1,12 @@
+.card-container {
+    padding: 1rem;
+    position: relative;
+    background: #212429;
+    padding: 3px;
+}
+
+.card {
+    background: #212429;
+    color: white;
+    padding: 2rem;
+}

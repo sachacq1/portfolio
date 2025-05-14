@@ -1,0 +1,10 @@
+h2 {
+    font-weight: 800;
+    background: -webkit-linear-gradient(0deg, #915dd9, #3f8fca);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+p {
+    color: #7b8495;
+}
