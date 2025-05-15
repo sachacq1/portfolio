@@ -1,3 +1,8 @@
+import "./education.css"
+import React, { useRef } from "react";
+import Draggable from 'react-draggable';
+
+
 const Education = () => {
     const educations = [
         {
@@ -27,24 +32,44 @@ const Education = () => {
     ]
 
     return (
-        <div className="container py-4" id="educacion">
-            <h1 className="text-center mb-5">Educación</h1>
+        <div
+            className="container py-4"
+            id="educacion"
+            style={{ position: "relative", height: "100vh" }}
+        >
+            <h2 className="text-center mb-5">Educación <br /> (las tarjetas se pueden arrastrar)</h2>
 
-            <div className="row g-4">
-                {educations.map((item, index) => (
-                    <div className="col-md-6" key={index}>
-                        <div className={`card h-100 border-${item.border}`}>
-                            <div className="card-body">
-                                <h5 className="card-title">{item.title}</h5>
-                                <h6 className="card-subtitle text-white">{item.subtitle}</h6>
-                                <p className="mb-2">{item.description}</p>
-                            </div>
+
+            {educations.map((item, index) => {
+                const nodeRef = useRef(null); // ref para cada card
+                return (
+                    <Draggable key={index} nodeRef={nodeRef}>
+                        <div
+                            ref={nodeRef}
+                            style={{
+                                position: "absolute",
+                                width: "400px",
+                                height: "200px",
+                                border: `2px solid var(--bs-${item.border})`,
+                                borderRadius: "5px",
+                                background: "#222",
+                                padding: "2rem",
+                                color: "white",
+                                cursor: "grab",
+                                userSelect: "none",
+                                top: 20 + index * 120,
+                                left: 20 + index * 120,
+                            }}
+                        >
+                            <h5>{item.title}</h5>
+                            <h6>{item.subtitle}</h6>
+                            <p>{item.description}</p>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    </Draggable>
+                );
+            })}
         </div>
-    )
-}
+    );
+};
 
 export default Education

@@ -20,7 +20,7 @@ const Contacto = () => {
     return (
         <div className="py-5">
             <div className="container">
-                <h1 className="text-center text-white mb-4">Contacto</h1>
+                <h2 className="text-center mb-4">Contacto</h2>
                 <form ref={form} onSubmit={enviarEmail} className="mx-auto bg-white p-4 rounded shadow" style={{ maxWidth: '600px' }}>
                     <div className="mb-3">
                         <label htmlFor="nombre" className="form-label">Nombre</label>

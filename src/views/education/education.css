@@ -1,0 +1,32 @@
+.card-border-wrapper {
+    position: relative;
+    padding: 2px;
+    /* grosor del borde */
+    border-radius: 0.75rem;
+    background: linear-gradient(270deg, #032629, #016f7ed2, #021b1d);
+    background-size: 400% 400%;
+    animation: borderMove 3s linear infinite;
+}
+
+@keyframes borderMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.card-inner {
+    background-color: #1e1e1e;
+    /* fondo de la card */
+    border-radius: 0.65rem;
+    height: 100%;
+}
+
+#educacion {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}

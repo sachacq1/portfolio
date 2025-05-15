@@ -3,6 +3,11 @@ import Skill from "../skill/skill.jsx";
 import Proyectos from "../Projects/projects.jsx";
 import Education from "../education/education.jsx";
 import Contacto from "../Contact/Contacto.jsx";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+AOS.init()
+
 
 const Home = () => {
     return (
@@ -25,10 +30,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <section id="/section"> <Skill /></section>
-            <section id="/section"> <Proyectos /></section>
-            <section id="/section"> <Education /></section>
-            <section id="/section"> <Contacto /></section>
+            <section id="/section" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500" data-aos-once="true"> <Skill /></section>
+            <section id="/section" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500" data-aos-once="true"> <Proyectos /></section>
+            <section id="/section" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500" data-aos-once="true"> <Education /></section>
+            <section id="/section" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1500" data-aos-once="true"> <Contacto /></section>
         </>
     );
 };

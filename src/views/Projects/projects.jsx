@@ -2,7 +2,7 @@ import "./projects.css";
 const Proyectos = () => {
     return (
         <div className="container py-4" id="proyectos">
-            <h1 className="text-center mb-5">Mis Proyectos Web</h1>
+            <h2 className="text-center mb-5">Mis Proyectos Web</h2>
 
             <div className="row g-4">
                 {/* Proyecto 1 */}
