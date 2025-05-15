@@ -32,43 +32,47 @@ const Education = () => {
     ]
 
     return (
-        <div
-            className="container py-4"
-            id="educacion"
-            style={{ position: "relative", height: "100vh" }}
-        >
-            <h2 className="text-center mb-5">Educación <br /> (las tarjetas se pueden arrastrar)</h2>
+        <>
+            <div
+                className="container py-4"
+                id="educacion"
+                style={{ position: "relative", height: "100vh" }}
+            >
+                <h2 className="text-center mb-5" >Educación <br /> (las tarjetas se pueden arrastrar)</h2>
 
+                < div style={{ marginTop: "80px" }}>
+                    {educations.map((item, index) => {
+                        const nodeRef = useRef(null);
+                        return (
+                            <Draggable key={index} nodeRef={nodeRef}>
+                                <div
+                                    ref={nodeRef}
+                                    style={{
+                                        position: "absolute",
+                                        width: "300px",
+                                        border: `2px solid var(--bs-${item.border})`,
+                                        borderRadius: "5px",
+                                        background: "#222",
+                                        padding: "1rem",
+                                        color: "white",
+                                        cursor: "grab",
+                                        userSelect: "none",
+                                        top: 20 + index * 120, // aún funciona el espaciado inicial
+                                        left: 20 + index * 120,
+                                        zIndex: 1
+                                    }}
+                                >
+                                    <h5>{item.title}</h5>
+                                    <h6>{item.subtitle}</h6>
+                                    <p>{item.description}</p>
+                                </div>
+                            </Draggable>
+                        );
+                    })}
+                </div>
+            </div >
 
-            {educations.map((item, index) => {
-                const nodeRef = useRef(null); // ref para cada card
-                return (
-                    <Draggable key={index} nodeRef={nodeRef}>
-                        <div
-                            ref={nodeRef}
-                            style={{
-                                position: "absolute",
-                                width: "400px",
-                                height: "200px",
-                                border: `2px solid var(--bs-${item.border})`,
-                                borderRadius: "5px",
-                                background: "#222",
-                                padding: "2rem",
-                                color: "white",
-                                cursor: "grab",
-                                userSelect: "none",
-                                top: 20 + index * 120,
-                                left: 20 + index * 120,
-                            }}
-                        >
-                            <h5>{item.title}</h5>
-                            <h6>{item.subtitle}</h6>
-                            <p>{item.description}</p>
-                        </div>
-                    </Draggable>
-                );
-            })}
-        </div>
+        </>
     );
 };
 

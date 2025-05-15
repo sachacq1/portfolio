@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
 
                 <p className="text-center mb-0 small">
-                    © {new Date().getFullYear()} Sacha Fotos. Todos los derechos reservados.
+                    © {new Date().getFullYear()} Sacha Quinteros. Todos los derechos reservados.
                 </p>
             </div>
         </footer>
