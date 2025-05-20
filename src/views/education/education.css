@@ -61,6 +61,7 @@
 @media (max-width: 768px) {
     .draggable-card {
         width: 30%;
+        height: auto;
         font-size: 0.9rem;
         padding: 0.75rem;
     }
@@ -70,6 +71,7 @@
 @media (max-width: 480px) {
     .draggable-card {
         width: 50%;
+        height: auto;
         font-size: 0.85rem;
         padding: 0.5rem;
     }
