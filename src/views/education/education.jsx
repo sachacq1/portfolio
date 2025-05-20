@@ -36,20 +36,25 @@ const Education = () => {
             <div
                 className="container py-4"
                 id="educacion"
-                style={{ position: "relative", height: "100vh" }}
             >
                 <h2 className="text-center mb-5" >Educación <br /> (las tarjetas se pueden arrastrar)</h2>
 
-                < div style={{ marginTop: "80px" }}>
+                < div className="row col-md-6 draggable-wrapper" style={{ marginTop: "80px" }}>
                     {educations.map((item, index) => {
                         const nodeRef = useRef(null);
                         return (
-                            <Draggable key={index} nodeRef={nodeRef}>
+                            <Draggable
+                                key={index}
+                                nodeRef={nodeRef}
+                                defaultPosition={{ x: 50, y: 20 + index * 80 }}
+                            >
                                 <div
+                                    className="draggable-card"
                                     ref={nodeRef}
                                     style={{
                                         position: "absolute",
-                                        width: "300px",
+                                        width: "25%",
+                                        height: "30%",
                                         border: `2px solid var(--bs-${item.border})`,
                                         borderRadius: "5px",
                                         background: "#222",
@@ -57,8 +62,6 @@ const Education = () => {
                                         color: "white",
                                         cursor: "grab",
                                         userSelect: "none",
-                                        top: 20 + index * 120, // aún funciona el espaciado inicial
-                                        left: 20 + index * 120,
                                         zIndex: 1
                                     }}
                                 >
@@ -67,6 +70,7 @@ const Education = () => {
                                     <p>{item.description}</p>
                                 </div>
                             </Draggable>
+
                         );
                     })}
                 </div>
