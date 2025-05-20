@@ -60,7 +60,7 @@
 /* RESPONSIVE: pantallas medianas */
 @media (max-width: 768px) {
     .draggable-card {
-        width: 50%;
+        width: 30%;
         font-size: 0.9rem;
         padding: 0.75rem;
     }
