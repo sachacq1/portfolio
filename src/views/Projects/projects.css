@@ -1,12 +1,50 @@
-.card-container {
-    padding: 1rem;
-    position: relative;
-    background: #212429;
-    padding: 3px;
+.project-card {
+    height: auto;
+    max-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: none;
 }
 
-.card {
-    background: #212429;
-    color: white;
-    padding: 2rem;
+/* Imagen */
+.card-img-top {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+/* Texto */
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Media query para celular */
+@media (max-width: 576px) {
+    .card-body {
+        font-size: 0.85rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.875rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.7rem;
+    }
+
+    .card-img-top {
+        max-height: 180px;
+    }
 }
