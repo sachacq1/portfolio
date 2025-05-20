@@ -62,7 +62,7 @@
     .draggable-card {
         width: 30%;
         height: auto;
-        font-size: 0.9rem;
+        font-size: 0.6rem;
         padding: 0.75rem;
     }
 }
@@ -72,7 +72,7 @@
     .draggable-card {
         width: 50%;
         height: auto;
-        font-size: 0.85rem;
+        font-size: 0.4rem;
         padding: 0.5rem;
     }
 }
