@@ -52,17 +52,9 @@ const Education = () => {
                                     className="draggable-card"
                                     ref={nodeRef}
                                     style={{
-                                        position: "absolute",
-                                        width: "25%",
-                                        height: "30%",
                                         border: `2px solid var(--bs-${item.border})`,
                                         borderRadius: "5px",
-                                        background: "#222",
-                                        padding: "1rem",
                                         color: "white",
-                                        cursor: "grab",
-                                        userSelect: "none",
-                                        zIndex: 1
                                     }}
                                 >
                                     <h5>{item.title}</h5>

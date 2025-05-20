@@ -40,12 +40,37 @@
     justify-content: center;
 }
 
+
 .draggable-card {
     position: absolute;
-    width: 100%;
+    width: 25%;
+    height: 35%;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 5px;
     background: #222;
     padding: 1rem;
-    color: white;
     cursor: grab;
     user-select: none;
+    z-index: 1;
+    font-size: 1rem;
+
+}
+
+/* RESPONSIVE: pantallas medianas */
+@media (max-width: 768px) {
+    .draggable-card {
+        width: 50%;
+        font-size: 0.9rem;
+        padding: 0.75rem;
+    }
+}
+
+/* RESPONSIVE: pantallas muy chicas */
+@media (max-width: 480px) {
+    .draggable-card {
+        width: 50%;
+        font-size: 0.85rem;
+        padding: 0.5rem;
+    }
 }
